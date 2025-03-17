@@ -1,5 +1,0 @@
-2025/03/17 15:11:15 main.go:310: usb-nas-cli v1.0.2 started.
-2025/03/17 15:11:15 main.go:280: Not running as administrator. Attempting to restart with elevated privileges...
-2025/03/17 15:11:16 main.go:310: usb-nas-cli v1.0.2 started.
-2025/03/17 15:11:16 main.go:54: New version 1.0.3 is available (current: 1.0.2).
-2025/03/17 15:11:17 main.go:101: Downloading new binary from: http://86.129.89.196/USB-NAS/usb-nas-cli-v1.0.3.exe
