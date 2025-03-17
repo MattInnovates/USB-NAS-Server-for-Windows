@@ -8,6 +8,8 @@
 *.so
 *.dylib
 Build_CLI.bat
+*.log
+version.txt
 
 # Test binary, built with `go test -c`
 *.test
