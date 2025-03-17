@@ -1,0 +1,14 @@
+2025/03/17 13:02:52 main.go:111: usb-nas-cli Debug Build started.
+2025/03/17 13:02:52 main.go:86: Not running as administrator. Attempting to restart with elevated privileges...
+2025/03/17 13:02:53 main.go:111: usb-nas-cli Debug Build started.
+2025/03/17 13:02:53 main.go:117: Detecting drives...
+2025/03/17 13:03:05 main.go:142: Drive selected: 2
+2025/03/17 13:03:05 main.go:50: Main IP detected: 192.168.1.204
+2025/03/17 13:03:05 main.go:152: Creating SMB share: Name=D, DrivePath=D:\, Using IP=192.168.1.204
+2025/03/17 13:03:05 main.go:56: Attempting to create SMB share: Name=D, Path=D:\
+2025/03/17 13:03:06 main.go:160: SMB Share 'D' created. Awaiting Ctrl+K to remove share.
+2025/03/17 13:03:19 main.go:174: Ctrl+K detected. Stopping SMB share 'D'
+2025/03/17 13:03:19 main.go:67: Attempting to remove SMB share: Name=D
+2025/03/17 13:03:20 main.go:180: SMB share 'D' removed successfully.
+2025/03/17 13:03:20 main.go:117: Detecting drives...
+2025/03/17 13:03:23 main.go:140: Invalid drive selection: EOF
