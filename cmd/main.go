@@ -336,8 +336,8 @@ func main() {
 			log.Fatalf("Failed to generate random number: %v", err)
 		}
 		randomNumber := num.Int64() + 10
-		tempUser := fmt.Sprintf("smbuser%d", randomNumber)
-		tempPass := fmt.Sprintf("SmbPass!%d", randomNumber)
+		tempUser := fmt.Sprintf("usbnas%d", randomNumber)
+		tempPass := fmt.Sprintf("UsbNas!%d", randomNumber)
 
 		// Create the temp user
 		if err := createTempUser(tempUser, tempPass); err != nil {
