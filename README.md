@@ -7,23 +7,44 @@ This project is an open-source, lightweight Windows application built with Go th
 ## 🔥 Features
 
 - Automatic USB detection and sharing via SMB.
-- Easy-to-use, minimalist interface.
-- Secure by design.
+- Easy-to-use, minimalist CLI interface.
+- Secure by design with controlled access.
 - Fully open-source and customizable.
+- Logs activity for monitoring.
 
 ## 📦 Installation
 
-*(Detailed installation instructions will appear here soon.)*
+### **1. Download the Binary**
+You can download the latest release from the [Releases](https://github.com/MattInnovates/USB-NAS-Server-for-Windows/releases) page.
+
+### **2. Manual Build (Optional)**
+If you want to build from source, ensure you have Go installed and run:
+```sh
+go build -o usb-nas-cli.exe ./cmd
+```
+
+## 🚀 Usage
+
+1. **Run the server** by executing:
+   ```sh
+   usb-nas-cli.exe
+   ```
+2. Plug in a USB drive and it will be automatically shared over the network.
+3. Access the shared drive via SMB using:
+   ```
+   \\YOUR-PC-IP\YOUR-USB-DRIVE
+   ```
+4. Press `Ctrl + K` to stop sharing the drive.
 
 ## 🚧 Current Status
 
-Currently in early development. Contributions and testing welcomed!
+The first stable version has been released! Further improvements, Web UI, and security enhancements are planned.
 
 ## 🛠️ Tech Stack
 
-- Go (Golang)
-- Windows native SMB sharing
-- Simple HTTP/Web UI planned
+- **Go (Golang)** - Core application
+- **Windows SMB** - Network sharing
+- **PowerShell Scripting** - Managing shares
 
 ## 🤝 Contributing
 
