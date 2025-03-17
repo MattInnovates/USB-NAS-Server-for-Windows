@@ -2,8 +2,7 @@
 
 This project is an open-source, lightweight Windows application built with Go that automatically turns your USB drives into network-accessible storage (NAS) instantly upon connection.
 
-![image](https://github.com/user-attachments/assets/633fd696-f39a-41f3-8152-69bf0cb437aa)
-
+![image](https://github.com/user-attachments/assets/6e59a6fa-c31b-47f7-b152-e65b2526d857)
 
 ## 🔥 Features
 
