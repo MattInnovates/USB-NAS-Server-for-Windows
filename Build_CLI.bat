@@ -1,29 +1,31 @@
 @echo off
-REM ================================
-REM usb-nas-cli Build Script
-REM ================================
+setlocal enabledelayedexpansion
 
-echo.
-echo Building usb-nas-cli.exe...
-echo.
-
-REM Check if Go is installed
-where go >nul 2>&1
-if errorlevel 1 (
-    echo ERROR: Go is not installed or not in your PATH.
-    pause
-    exit /b 1
+REM --- Read the current version from version.txt ---
+if not exist version.txt (
+    echo 1.0.0 > version.txt
 )
+set /p version=<version.txt
+echo Current version: %version%
 
-REM Build the executable from main.go
-go build -o usb-nas-cli.exe cmd/main.go
-if errorlevel 1 (
-    echo ERROR: Build failed. See output above for details.
-    pause
-    exit /b 1
-) else (
-    echo SUCCESS: Build succeeded! usb-nas-cli.exe created.
+REM --- Split the version into major, minor, and patch components ---
+for /f "tokens=1-3 delims=." %%a in ("%version%") do (
+    set major=%%a
+    set minor=%%b
+    set patch=%%c
 )
+echo Major: %major%, Minor: %minor%, Patch: %patch%
 
-echo.
+REM --- Increment the patch number ---
+set /a patch=%patch%+1
+set newVersion=%major%.%minor%.%patch%
+echo New version: %newVersion%
+
+REM --- Write the new version back to version.txt ---
+echo %newVersion% > version.txt
+
+REM --- Build the executable using ldflags to set main.currentVersion ---
+go build -ldflags "-X main.currentVersion=%newVersion%" -o usb-nas-cli-v%newVersion%.exe cmd/main.go
+
+echo Build completed: usb-nas-cli-v%newVersion%.exe
 pause
